@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<!-- 
+    <input id="in" type="text" placeholder="text">
+    <button id="btn">ork hna</button>
+    <h1 id="h1"></h1> -->
+    <div class="mm">
+        <label for="kg"><h1>lwazn dyalk al4lid</h1></label>
+    <input id="kg" type="number">
+    <label for="m"><h1>tol dyalk al3yan</h1></label>
+    <input id="m" type="number">
+    <button id="btn">ara dik xoha</button>
+    <h2 id="lhsab"></h2>
+    <h1 id="lwad3"></h1>
+    </div>
+    
+    <script>
+        // let inp = document.getElementById("in");
+        // let btn = document.getElementById("btn");
+
+        // btn.addEventListener("click" , ()=>{
+        // document.getElementById("h1").innerHTML = `${inp.value}`
+        // })
+
+        let kg = document.getElementById("kg")
+        let tol = document.getElementById("m")
+        let lhsab = document.getElementById("lhsab")
+        let lwa = document.getElementById("lwad3");
+        
+        let btn = document.getElementById("btn");
+        btn.addEventListener("click",()=>{
+            let lhsaab =  kg.value / (tol.value * tol.value)
+            lhsab.innerHTML = `${lhsaab}`
+
+            switch(true){
+                case (lhsaab >= 10 && lhsaab < 18):
+                    lwa.innerHTML = `sir kol n3ma wrd lbal lidek lbard`
+                    break
+                case (lhsaab >= 18 && lhsaab <= 24.9):
+                    lwa.innerHTML = `awdi rak nadi adyalna`
+                    break
+                case (lhsaab >= 25 && lhsaab <= 29.9):
+                    lwa.innerHTML = `n9as xwia mn lmakla asahbi`
+                    break
+                case (lhsaab >= 30 && lhsaab <= 34.9):
+                    lwa.innerHTML = `bdat l9adya kthmad adyalna`
+                    break
+                case (lhsaab >= 35 && lhsaab <= 39.9):
+                    lwa.innerHTML = `fin 4adi fin awa 4adi`
+                    break
+                case (lhsaab >= 18 && lhsaab <= 24.9):
+                    lwa.innerHTML = `ina li lah awda ada hmad`
+                    break
+                default: 
+                lwa.innerHTML = `waaaaa si lmlawi d5l dakxi m9ad albldi`
+            }
+        })
+        
+        
+        
+        
+            </script>
+</body>
+</html>
